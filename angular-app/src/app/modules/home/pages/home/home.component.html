@@ -1,0 +1,7 @@
+<app-mat-loading *ngIf="isLoadingResults;else content"></app-mat-loading>
+
+<ng-template #content>
+    <div class="layout-container">
+        <app-mat-table [data]="dataSource"></app-mat-table>
+    </div>
+</ng-template>
