@@ -8,9 +8,9 @@ describe('MatLoadingComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MatLoadingComponent ]
+      declarations: [MatLoadingComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +21,10 @@ describe('MatLoadingComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should contain mat-spinner', () => {
+    const matSpinner = fixture.debugElement.nativeElement.querySelector('spinner');
+    expect(matSpinner).toBeDefined();
   });
 });

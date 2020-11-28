@@ -1,4 +1,5 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { By } from '@angular/platform-browser';
 
 import { MatTableComponent } from './mat-table.component';
 
@@ -8,9 +9,9 @@ describe('MatTableComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MatTableComponent ]
+      declarations: [MatTableComponent]
     })
-    .compileComponents();
+      .compileComponents();
   }));
 
   beforeEach(() => {
@@ -21,5 +22,12 @@ describe('MatTableComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  it('should contain no rows when no input is received', () => {
+    fixture.whenStable().then(() => {
+      const rows = fixture.debugElement.queryAll(By.css('.mat-table tbody tr'));
+      expect(rows.length).toBe(0);
+    });
   });
 });

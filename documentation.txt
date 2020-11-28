@@ -1,0 +1,10 @@
+Angular v9 
+
+I have used Angular Material to display data in a table. The columns are sortable.
+
+In "HomeComponent" the "setTimeout()" function was used just to simulate an API call
+which will maybe take some time to return data and in the meantime a loader is displayed.
+
+Data is loaded from "data.json" file which is in "assets" folder.
+
+Unit test for components and service are written in "*.specs.ts" files.

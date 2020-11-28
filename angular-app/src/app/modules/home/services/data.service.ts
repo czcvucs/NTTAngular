@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { map } from 'rxjs/operators';
 import { VData } from '../models';
 
 @Injectable({
@@ -10,7 +9,7 @@ export class DataService {
 
   constructor(private http: HttpClient) { }
 
-  public async getJSON() {
+  public async getData() {
     return this.http.get<VData>('./assets/data.json').toPromise();
   }
 }

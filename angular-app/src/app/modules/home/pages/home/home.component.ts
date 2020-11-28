@@ -18,7 +18,7 @@ export class HomeComponent implements OnInit {
   }
 
   async fetchData() {
-    await this.dataService.getJSON().then(x => {
+    await this.dataService.getData().then(x => {
       setTimeout(() => {
         this.isLoadingResults = false;
         this.dataSource = x;
